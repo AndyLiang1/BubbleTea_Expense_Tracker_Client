@@ -49,7 +49,7 @@ function UserTable({
   const { authState, setAuthState } = useContext(AuthContext);
 
   /**
-   * This function queries from the database and gathers all of the purchases 
+   * This function gets information from the database and gathers all of the purchases 
    * of the user with an id of authState.id (which is the user's id)
    */
   const loadUserTable = () => {
