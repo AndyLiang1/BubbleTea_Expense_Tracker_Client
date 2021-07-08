@@ -22,7 +22,7 @@ function User() {
    * to display that information
    */
   const loadGlobalTable = () => {
-    fetch("https://bubbletea-expense-tracker.herokuapp.com/user/getGlobalPurchases", {
+    fetch("https://bubbletea-expense-tracker.herokuapp.com/user/purchase", {
       headers: {
         accessToken: localStorage.getItem("accessToken"),
       },
