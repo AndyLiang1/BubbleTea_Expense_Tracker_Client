@@ -49,14 +49,14 @@ function UserTable({
   const { authState, setAuthState } = useContext(AuthContext);
 
   /**
-   * This function gets information from the database and gathers all of the purchases 
+   * This function queries from the database and gathers all of the purchases 
    * of the user with an id of authState.id (which is the user's id)
    */
   const loadUserTable = () => {
     if (isQuerying) {
       return;
     }
-    fetch("https://bubbletea-expense-tracker.herokuapp.com/user/purchase/" + authState.id, {
+    fetch("http://localhost:3001/user/purchase/" + authState.id, {
       headers: {
         accessToken: localStorage.getItem("accessToken"),
       },
@@ -110,7 +110,7 @@ function UserTable({
    */
   const fillInLabelsWithPrevValues = () => {
     const userId = authState.id;
-    fetch(`https://bubbletea-expense-tracker.herokuapp.com/user/purchase/${userId}/${purchaseIdEdit}`, {
+    fetch(`http://localhost:3001/user/purchase/${userId}/${purchaseIdEdit}`, {
       headers: {
         accessToken: localStorage.getItem("accessToken"),
       },
