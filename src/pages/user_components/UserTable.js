@@ -110,7 +110,7 @@ function UserTable({
    */
   const fillInLabelsWithPrevValues = () => {
     const userId = authState.id;
-    fetch(`http://localhost:3001/user/purchase/${userId}/${purchaseIdEdit}`, {
+    fetch(`https://bubbletea-expense-tracker.herokuapp.com/${userId}/${purchaseIdEdit}`, {
       headers: {
         accessToken: localStorage.getItem("accessToken"),
       },
