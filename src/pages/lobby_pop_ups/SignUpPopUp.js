@@ -46,6 +46,7 @@ function SignUpPopUp({ open, closeSignUp }) {
      */
     const signUp = (submittedData) => {
         const { name, email, password } = submittedData
+        console.log( { name, email, password })
         const emailLowerCase = email.toLowerCase()
         fetch("https://bubbletea-expense-tracker.herokuapp.com/lobby/register", {
             mode: 'cors',
